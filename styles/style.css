@@ -1,0 +1,466 @@
+:root {
+  --primaria: #a3c4dc;
+  --fundo-claro: #ffffff;
+  --dourado: #daa520;
+  --gradiente-texto: linear-gradient(45deg, #2c3e50, #3498db);
+  --gradiente-botao: linear-gradient(45deg, #2c3e50, #3498db);
+  --gradiente-fundo: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Estilos Gerais */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--fundo-claro);
+  padding-top: 25px;
+}
+
+/* Class Aleatoria */
+.min-margin{
+    margin-top: -50px;
+}
+
+
+/* Estilos de texto atualizados */
+.display-4,
+.display-5 {
+  background: var(--gradiente-texto);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 500;
+}
+
+.lead {
+  color: #555;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+/* Header e Navegação */
+.navbar {
+  border-bottom: 1px solid #ddd;
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.bg-glass:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.gradient-text {
+  background: var(--gradiente-texto);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* Seção Hero */
+.hero-section {
+  min-height: 90vh;
+  background: var(--gradiente-fundo);
+}
+
+/* Carrossel */
+.carousel-item img {
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Botões */
+.action-button {
+  background: var(--gradiente-botao);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-btn {
+  background-color: var(--dourado);
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Seções */
+.section {
+  padding: 60px 20px;
+}
+
+.section:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Card de Venda */
+.card-venda {
+  border: 2px solid var(--dourado);
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primaria);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Seção Playlist */
+.music-list {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.music-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.music-item:hover {
+  background: rgba(163, 196, 220, 0.1);
+}
+
+.music-item i {
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.music-item span {
+  flex: 1;
+  color: #444;
+  font-weight: 500;
+}
+
+.play-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.music-item:hover .play-icon {
+  opacity: 1;
+  color: var(--primaria) !important;
+}
+
+.more-songs {
+  color: #666;
+  font-style: italic;
+  border-bottom: none;
+}
+
+.more-songs i {
+  color: var(--primaria);
+}
+/* Player estilo retrô */
+.preview-player {
+  background: linear-gradient(145deg, #2c3e50, #3498db);
+  border-radius: 15px;
+  padding: 25px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.player-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.player-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Remove estilos antigos que não serão mais usados */
+.music-item .badge {
+  display: none;
+}
+
+/* Card de Vendas */
+.sale-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0;
+}
+
+.sale-card {
+  max-width: 600px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sale-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.sale-card-header {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  padding: 30px;
+}
+
+.price-tag {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.currency {
+  font-size: 2rem;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.cents {
+  font-size: 2rem;
+  vertical-align: top;
+}
+
+.sale-card-body {
+  padding: 30px;
+}
+
+.more-songs-list {
+  position: relative;
+}
+
+.music-preview {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.music-preview i {
+  margin-right: 15px;
+}
+
+.fade-out {
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.benefits-list {
+  margin: 30px 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.benefit-item i {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.warranty-seal {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin: 30px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.warranty-seal::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 60%
+  );
+  animation: rotate 10s linear infinite;
+}
+
+.seal-content {
+  position: relative;
+  z-index: 1;
+}
+
+.buy-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+  color: white;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Seção de Depoimentos */
+.testimonials-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primaria);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.testimonial-author {
+  color: var(--dourado);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* CTA Final com mais destaque */
+.cta-final {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+  opacity: 1 !important;
+}
+
+.cta-final .action-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer Atualizado */
+.footer-section {
+  background: white;
+  border-top: 1px solid #eee;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-link {
+  color: var(--primaria);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  color: var(--dourado);
+}
+
+.copyright {
+  color: #666;
+}
+
+/* Animações de Entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

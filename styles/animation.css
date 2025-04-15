@@ -1,0 +1,37 @@
+/* Animações */
+.fade-in,
+.fade-up,
+.scale-in,
+.slide-in {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in {
+  transform: translateY(20px);
+}
+
+.fade-up {
+  transform: translateY(40px);
+}
+
+.scale-in {
+  transform: scale(0.95);
+}
+
+.slide-in {
+  transform: translateX(-20px);
+}
+
+/* Classe visible que será adicionada pelo JavaScript */
+.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) translateX(0);
+}
+
+/* Delay para animações em sequência */
+.animate-child {
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
