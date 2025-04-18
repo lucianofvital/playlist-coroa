@@ -19,7 +19,7 @@
     <!-- Header Fixo -->
     <header class="fixed-top">
       <nav class="navbar navbar-expand-lg bg-glass">
-        <div class="container">
+        <div class="container-fluid">
           <a class="navbar-brand d-flex align-items-center" href="#">
             <i class="fas fa-headphones-alt fa-2x me-2 text-primary"></i>
             <span class="gradient-text fs-4">Playlist dos Coroa</span>
@@ -30,81 +30,41 @@
 
     <!-- Main -->
     <main>
-      <!-- Seção Hero com Carrossel -->
-      <section class="hero-section">
-        <div class="container py-5">
-          <!-- Carrossel -->
-          <div
-            id="heroCarousel"
-            class="carousel slide mb-5"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="/assets/img/img-cd.jpg"
-                  class="d-block w-100"
-                  alt="Música 1"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="/assets/img/banda1.jpg"
-                  class="d-block w-100"
-                  alt="Música 2"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="/assets/img/banda2.jpg"
-                  class="d-block w-100"
-                  alt="Música 3"
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#heroCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#heroCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Próximo</span>
-            </button>
-          </div>
+      <!-- Seção Hero com Vídeo -->
+<section class="hero-section background-gradient ">
+  <div class="container py-5 ">
+    <!-- Vídeo -->
+    <div class="video-wrapper mb-5 contorno position-relative z-1">
+      <video 
+        class="w-100" 
+        controls 
+        autoplay 
+        muted 
+        loop
+      >
+        <source src="/assets/media/video-playlist.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+    </div>
 
-          <!-- Texto e CTA -->
-          <div class="text-center cta-final min-margin">
-            <h1 class="display-4 mb-4">Playlist dos Coroa</h1>
-            <p class="lead mb-5">
-              Os grandes sucessos de todos os tempos, nacionais e
-              internacionais, reunidos em pastas separadas por gêneros pra você
-              ouvir no carro, celular, notebook e na sua tv.
-            </p>
-            <button class="action-button" onclick="scrollToSection('venda')">
-              Baixar Playlist Agora!
-            </button>
-          </div>
-        </div>
-      </section>
+    <!-- Texto e CTA -->
+    <div class="text-center cta-content bg-white rounded-4 shadow-lg p-5 mx-auto" style="max-width: 800px;">
+      <h1 class="display-4 mb-4 max-margin">Playlist dos Coroa</h1>
+      <p class="lead mb-5">
+        Os grandes sucessos de todos os tempos, nacionais e
+        internacionais, reunidos em pastas separadas por gêneros pra você
+        ouvir no carro, celular, notebook e na sua tv.
+      </p>
+      <button class="action-button" onclick="scrollToSection('venda')">
+        Baixar Playlist Agora!
+      </button>
+    </div>
+  </div>
+  <div class="separador-triangulo"></div>
+</section>
 
       <!-- Seção 2: Sobre as músicas -->
-      <section class="section playlist-section">
+      <section class="playlist-section ">
         <!-- Player de Prévia -->
         <div class="col-lg-6">
             <div class="preview-player">
@@ -172,7 +132,7 @@
             </section>
 
       <!-- Seção 3: Card de Vendas -->
-<section id="venda" class="section sale-section">
+<section id="venda" class="section sale-section background-gradient">
     <div class="container">
       <div class="sale-card mx-auto">
         <!-- Header do Card -->
@@ -236,6 +196,7 @@
               <p>Satisfação garantida ou seu dinheiro de volta</p>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -243,11 +204,11 @@
 
       
 <!-- Seção de Depoimentos -->
-<section class="section testimonials-section fade-in">
+<section class="section fade-in background-gradient">
     <div class="container">
       <div class="text-center mb-5">
         <span class="badge rounded-pill text-bg-primary mb-2">DEPOIMENTOS</span>
-        <h2 class="display-5 fw-bold mb-4">❤️ Nossos Clientes Aprovam ❤️</h2>
+        <h2 class="display-6 fw-bold mb-4">❤️ Nossos Clientes Aprovam ❤️</h2>
         <p class="lead text-muted">Veja o que dizem sobre nossa playlist</p>
       </div>
   

@@ -2,24 +2,67 @@
   --primaria: #a3c4dc;
   --fundo-claro: #ffffff;
   --dourado: #daa520;
-  --gradiente-texto: linear-gradient(45deg, #2c3e50, #3498db);
-  --gradiente-botao: linear-gradient(45deg, #2c3e50, #3498db);
-  --gradiente-fundo: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  --gradiente-texto: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  --gradiente-botao: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  --gradiente-fundo: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
 }
 
 /* Estilos Gerais */
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   background-color: var(--fundo-claro);
   padding-top: 25px;
 }
 
-/* Class Aleatoria */
-.min-margin{
-    margin-top: -50px;
+p {
+  color: white;
 }
 
+/* Class Aleatoria */
+.min-margin {
+  margin-top: -50px;
+}
+
+.max-margin {
+  margin-top: 50px;
+}
+
+.separador-triangulo {
+  clip-path: polygon(0 0, 100% 100%, 0% 100%);
+  height: 50px;
+  background-color: var(--fundo-claro);
+}
+
+/*Aleatorio contorno colorido*/
+
+.contorno {
+  /*   -webkit-box-shadow: 5px 5px 50px 10px #ff6100;  */
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  box-shadow: 5px 5px 50px 10px #ff6100;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  background-color: #ff6100;
+  border: none;
+  border-radius: 15px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 20px #ff6100, 0 0 30px #ff6100,
+      0 0 40px #ff6100, 0 0 50px #ff6100, 0 0 60px #ff6100;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff6100, 0 0 40px #ff6100,
+      0 0 50px #ff6100, 0 0 60px #ff6100, 0 0 70px #ff6100, 0 0 80px #ff6100;
+  }
+}
 
 /* Estilos de texto atualizados */
 .display-4,
@@ -29,6 +72,13 @@ body {
   background-clip: text;
   color: transparent;
   font-weight: 500;
+}
+
+.display-6 {
+  color: var(--fundo-claro);
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .lead {
@@ -43,7 +93,7 @@ body {
 }
 
 .bg-glass {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(7, 7, 7, 0);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
@@ -53,7 +103,7 @@ body {
 }
 
 .gradient-text {
-  background: var(--gradiente-texto);
+  background: var(--fundo-claro);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -63,7 +113,6 @@ body {
 /* Seção Hero */
 .hero-section {
   min-height: 90vh;
-  background: var(--gradiente-fundo);
 }
 
 /* Carrossel */
@@ -96,31 +145,6 @@ body {
   font-size: 18px;
   border-radius: 8px;
   color: #fff;
-}
-
-/* Seções */
-.section {
-  padding: 60px 20px;
-}
-
-.section:nth-child(even) {
-  background-color: #f5f5f5;
-}
-
-/* Card de Venda */
-.card-venda {
-  border: 2px solid var(--dourado);
-  padding: 30px;
-  border-radius: 15px;
-  background-color: #fff;
-}
-
-/* Footer */
-footer {
-  background-color: var(--primaria);
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
 }
 
 /* Seção Playlist */
@@ -176,7 +200,7 @@ footer {
 }
 /* Player estilo retrô */
 .preview-player {
-  background: linear-gradient(145deg, #2c3e50, #3498db);
+  background: var(--gradiente-fundo);
   border-radius: 15px;
   padding: 25px;
   color: white;
@@ -208,7 +232,6 @@ footer {
 
 /* Card de Vendas */
 .sale-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 80px 0;
 }
 
@@ -357,9 +380,6 @@ footer {
 }
 
 /* Seção de Depoimentos */
-.testimonials-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
 
 .testimonial-card {
   background: white;
@@ -463,4 +483,35 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/******** Novas atualizações. *********/
+
+/* Gradiente de fundo para hero */
+.background-gradient {
+  background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilização do vídeo */
+.video-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+}
+
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Conteúdo CTA com fundo branco */
+.cta-content {
+  position: relative;
+  margin-top: -100px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
