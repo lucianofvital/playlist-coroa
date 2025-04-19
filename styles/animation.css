@@ -1,3 +1,17 @@
+:root {
+  --primaria: #a3c4dc;
+  --fundo-claro: #ffffff;
+  --dourado: #daa520;
+  --gradiente-texto: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  --gradiente-botao: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  --gradiente-fundo: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffd700 50%,
+    #ff8c00 100%
+  );
+}
+
 /* Animações */
 .fade-in,
 .fade-up,
@@ -34,4 +48,68 @@
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: var(--delay, 0ms);
+}
+
+/* Animação scroll infinito */
+
+/* Estilo base do container */
+#tag-list {
+  position: relative;
+  overflow: hidden;
+  background: var(--fundo-claro);
+  padding: 2rem 0;
+}
+
+/* Loop externo */
+.loop-slider {
+  --duration: 15000ms;
+  --direction: normal;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+/* Área que se move */
+.loop-slider .inner {
+  display: flex;
+  width: max-content;
+  animation: scroll var(--duration) linear infinite;
+  animation-direction: var(--direction);
+}
+
+/* Cada tag */
+.tag {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: var(--color);
+  color: #000;
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px #0003;
+}
+
+/* Efeito de fade nas laterais */
+.fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #111,
+    transparent 20%,
+    transparent 80%,
+    #111
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Animação */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

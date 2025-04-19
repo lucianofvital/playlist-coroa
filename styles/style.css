@@ -4,7 +4,12 @@
   --dourado: #daa520;
   --gradiente-texto: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
   --gradiente-botao: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
-  --gradiente-fundo: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  --gradiente-fundo: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffd700 50%,
+    #ff8c00 100%
+  );
 }
 
 /* Estilos Gerais */
@@ -14,11 +19,15 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
   background-color: var(--fundo-claro);
-  padding-top: 25px;
 }
 
 p {
   color: white;
+}
+
+span {
+  color: var(--dourado);
+  font-weight: 700;
 }
 
 /* Class Aleatoria */
@@ -114,14 +123,6 @@ p {
 .hero-section {
   min-height: 90vh;
 }
-
-/* Carrossel */
-.carousel-item img {
-  height: 350px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
 /* Botões */
 .action-button {
   background: var(--gradiente-botao);
@@ -200,7 +201,7 @@ p {
 }
 /* Player estilo retrô */
 .preview-player {
-  background: var(--gradiente-fundo);
+  background: var(--primaria);
   border-radius: 15px;
   padding: 25px;
   color: white;
@@ -225,15 +226,7 @@ p {
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Remove estilos antigos que não serão mais usados */
-.music-item .badge {
-  display: none;
-}
-
 /* Card de Vendas */
-.sale-section {
-  padding: 80px 0;
-}
 
 .sale-card {
   max-width: 600px;
@@ -489,7 +482,7 @@ p {
 
 /* Gradiente de fundo para hero */
 .background-gradient {
-  background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffd700 50%, #ff8c00 100%);
   position: relative;
   overflow: hidden;
 }
@@ -514,4 +507,47 @@ p {
   margin-top: -100px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
+}
+
+/* Seção de Explicação do Produto */
+.product-section {
+  background-color: var(--fundo-claro);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.feature-item i {
+  font-size: 1.2rem;
+  color: var(--dourado);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.image-wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--gradiente-fundo);
+  border-radius: 20px;
+  opacity: 0.1;
+  z-index: -1;
 }

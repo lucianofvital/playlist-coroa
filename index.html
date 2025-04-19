@@ -16,22 +16,11 @@
     <link rel="stylesheet" href="styles/animation.css" />
   </head>
   <body>
-    <!-- Header Fixo -->
-    <header class="fixed-top">
-      <nav class="navbar navbar-expand-lg bg-glass">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <i class="fas fa-headphones-alt fa-2x me-2 text-primary"></i>
-            <span class="gradient-text fs-4">Playlist dos Coroa</span>
-          </a>
-        </div>
-      </nav>
-    </header>
 
     <!-- Main -->
     <main>
       <!-- Seção Hero com Vídeo -->
-<section class="hero-section background-gradient ">
+<section class="hero-section background-gradient">
   <div class="container py-5 ">
     <!-- Vídeo -->
     <div class="video-wrapper mb-5 contorno position-relative z-1">
@@ -42,7 +31,7 @@
         muted 
         loop
       >
-        <source src="/assets/media/video-playlist.mp4" type="video/mp4">
+        <source src="assets/media/video-playlist.mp4" type="video/mp4">
         Seu navegador não suporta vídeos HTML5.
       </video>
     </div>
@@ -51,9 +40,9 @@
     <div class="text-center cta-content bg-white rounded-4 shadow-lg p-5 mx-auto" style="max-width: 800px;">
       <h1 class="display-4 mb-4 max-margin">Playlist dos Coroa</h1>
       <p class="lead mb-5">
-        Os grandes sucessos de todos os tempos, nacionais e
-        internacionais, reunidos em pastas separadas por gêneros pra você
-        ouvir no carro, celular, notebook e na sua tv.
+        Os <span>grandes sucessos</span> de todos os tempos, nacionais e
+        internacionais, reunidos em pastas separadas por gêneros <span>pra você
+        ouvir</span> no carro, celular, notebook e na sua tv.
       </p>
       <button class="action-button" onclick="scrollToSection('venda')">
         Baixar Playlist Agora!
@@ -65,79 +54,42 @@
 
       <!-- Seção 2: Sobre as músicas -->
       <section class="playlist-section ">
-        <!-- Player de Prévia -->
-        <div class="col-lg-6">
-            <div class="preview-player">
-              <h4 class="mb-4">🎧 Prévia da Playlist</h4>
-              <div class="player-card">
-                <img src="/assets/img/img-cd.jpg" class="player-image" alt="Capa da música">
-                <div>
-                  <h6 class="mb-1">Playlist Dos Coroa</h6>
-                  <audio controls class="w-100">
-                    <source src="/assets/media/music1.mp3" type="audio/mpeg" />
-                  </audio>
-                </div>
-              </div>
-            </div>
+        <div class="feature-list">
+          <div class="tag-list" id="tag-list"></div>
           </div>
-        </div>
-        <br>
-
-
         <div class="container">
           <div class="text-center mb-5">
-            <span class="badge rounded-pill text-bg-primary mb-2"
-              >8.000+ MÚSICAS</span
-            >
-            <h2 class="display-5 fw-bold mb-4">🎵 Sucessos Inesquecíveis 🎵</h2>
+            <h2 class="display-5 fw-bold mb-4">🎵 Sucessos Inesquecíveis </h2>
             <p class="lead text-muted">
                 São mais de 8.000 músicas no formato Mp3, com qualidade de 320 Kbps, todas no mesmo volume de som, com intervalos de apenas 2'segundos, entre uma e outra.
             </p>
           </div>
-
-          <div class="row g-4">
-            <!-- Lista de Músicas -->
-            <div class="col-lg-6">
-              <div class="music-list">
-                <div class="music-item">
-                  <i class="fas fa-music text-primary"></i>
-                  <span>ANOS 60, 70, 80, 90 e 2000 (Remix)</span>
-                  <i class="fas fa-play text-muted play-icon"></i>
-                </div>
-                <div class="music-item">
-                  <i class="fas fa-music text-primary"></i>
-                  <span>BREGAS  (Remix)</span>
-                  <i class="fas fa-play text-muted play-icon"></i>
-                </div>
-                <div class="music-item">
-                  <i class="fas fa-music text-primary"></i>
-                  <span>ITALIANAS 60,70,80 (Originais)</span>
-                  <i class="fas fa-play text-muted play-icon"></i>
-                </div>
-                <div class="music-item">
-                  <i class="fas fa-music text-primary"></i>
-                  <span>INTERNACIONAIS 60,70,80 (Originais Remix)</span>
-                  <i class="fas fa-play text-muted play-icon"></i>
-                </div>
-                <div class="music-item">
-                  <i class="fas fa-music text-primary"></i>
-                  <span>CLASSICOS DA MPB - Originais todos os tempos</span>
-                  <i class="fas fa-play text-muted play-icon"></i>
-                </div>
-                <div class="music-item more-songs">
-                  <i class="fas fa-ellipsis-h text-primary"></i>
-                  <span>E muito mais...</span>
-                </div>
+        </div>
+        <br>
+        <!-- Player de Prévia -->
+        <div class="col-lg-6">
+          <div class="preview-player">
+            <h4 class="mb-4">🎧 Prévia da Playlist</h4>
+            <div class="player-card">
+              <img src="/assets/img/img-cd.jpg" class="player-image" alt="Capa da música">
+              <div>
+                <h6 class="mb-1">Playlist Dos Coroa</h6>
+                <audio controls class="w-100">
+                  <source src="/assets/media/music1.mp3" type="audio/mpeg" />
+                </audio>
               </div>
+            </div>
+          </div>
+      </div>
             </section>
 
       <!-- Seção 3: Card de Vendas -->
-<section id="venda" class="section sale-section background-gradient">
+<section id="venda" class="section max-margin background-gradient">
     <div class="container">
       <div class="sale-card mx-auto">
         <!-- Header do Card -->
         <div class="sale-card-header text-center">
-          <h3 class="mb-0">Playlist dos Coroas</h3>
+          <h3 class="mb-0 display-3">Playlist dos Coroas</h3>
           <div class="price-tag">
             <span class="currency">R$</span>
             <span class="amount">19</span>
@@ -146,26 +98,25 @@
         </div>
   
         <!-- Corpo do Card -->
-        <div class="sale-card-body">
-          <!-- Mais músicas -->
-          <div class="more-songs-list">
-            <div class="music-preview">
-              <i class="fas fa-music text-primary"></i>
-              <span>SAMBAS E PAGODES 2000 (Originais)</span>
-            </div>
-            <div class="music-preview">
-              <i class="fas fa-music text-primary"></i>
-              <span>SERTANEJAS (Antigas)</span>
-            </div>
-            <div class="music-preview">
-              <i class="fas fa-music text-primary"></i>
-              <span>CARNAVAL -  Vários artistas (Originais)</span>
-            </div>
-            <div class="music-preview fade-out"></div>
-          </div>
-  
+        <div class="sale-card-body">  
           <!-- Benefícios -->
           <div class="benefits-list mt-4">
+            <div class="benefit-item">
+              <i class="fas fa-check-circle text-success"></i>
+              <span>Mais de 8.000 músicas organizadas por gênero</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-check-circle text-success"></i>
+              <span>Qualidade de áudio superior em 320 Kbps</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-check-circle text-success"></i>
+              <span>Compatível com todos os dispositivos</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-check-circle text-success"></i>
+              <span>Organização por pastas para fácil navegação</span>
+            </div>
             <div class="benefit-item">
               <i class="fas fa-check-circle text-success"></i>
               <span>Músicas em Alta Qualidade</span>
@@ -200,7 +151,32 @@
         </div>
       </div>
     </div>
+    <div class="separador-triangulo"></div>
   </section>
+  
+
+  <!-- Seção Explicação do Produto -->
+<section class="product-section py-5 fade-in">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2 class="display-5 fw-bold mb-4">A Melhor Seleção Musical Para Sua Diversão 🎵</h2>
+       
+        <p class="lead text-muted mb-4">
+          Uma coleção única com os maiores sucessos de todos os tempos, 
+          cuidadosamente selecionados e organizados para você curtir seus 
+          momentos especiais com a melhor qualidade de som.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="text-center">
+        <img src="assets/img/disco.coroa.png" alt="Preview nos dispositivos" 
+             class="img-fluid rounded-4 hover-scale">
+      </div>
+    </div>
+  </div>
+</section>
 
       
 <!-- Seção de Depoimentos -->
@@ -289,5 +265,6 @@
     <!-- Script Bootstrap + Scroll -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/scroll-infinity.js"></script>
   </body>
 </html>
